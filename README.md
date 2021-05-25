@@ -1,0 +1,1 @@
+Cantidad de personas vivas según rango de años (1900 - 2000)
