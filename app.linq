@@ -5,8 +5,8 @@
 
 void Main()
 {
-	var fileName = "Data/Fechas Personas Una Linea.txt";	
-	var outputName = "Data/dataCSharp.json";
+	var fileName = "Data/Names with Dates.txt";	
+	var outputName = "Export/dataCSharp.json";
 	
 	var parent = new DirectoryInfo(Util.CurrentQueryPath).Parent.ToString();
 
@@ -22,6 +22,8 @@ void Main()
 	var json = JsonConvert.SerializeObject(dic, Newtonsoft.Json.Formatting.None);
 
 	File.WriteAllText($"{parent}/{outputName}", json);
+	
+	"Success!!".Dump();
 }
 
 List<Person> ByYear(List<Person> people, int year)

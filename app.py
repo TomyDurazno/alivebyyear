@@ -1,7 +1,7 @@
 import json
 
-fileName = "Data/Fechas Personas Una Linea.txt"
-outputName = 'Data/dataPy.json'
+fileName = "Data/Names with Dates.txt"
+outputName = "Export/dataPy.json"
 
 line = open(fileName, "r").readline()
 
@@ -26,3 +26,5 @@ for i in range(1900, 2001):
 
 with open(outputName, 'w') as f:
     json.dump(dic, f)
+    
+print("Success!!")
