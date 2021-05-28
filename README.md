@@ -1,1 +1,3 @@
-Cantidad de personas vivas según rango de años (1900 - 2000)
+Number of people alive by age range (1900 - 2000)
+
+Examples in C# & Python
