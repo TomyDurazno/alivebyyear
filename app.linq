@@ -7,10 +7,10 @@ void Main()
 {
 	var fileName = "Data/Names with Dates.txt";	
 	var outputName = "Export/dataCSharp.json";
-	
-	var parent = new DirectoryInfo(Util.CurrentQueryPath).Parent.ToString();
 
-	var line = File.ReadAllText($"{parent}/{fileName}");
+	var path = Util.CurrentQuery.Location;
+
+	var line = File.ReadAllText($"{path}/{fileName}");
 
 	var elements = JToken.Parse(line).ToObject<List<Person>>();
 
@@ -21,7 +21,7 @@ void Main()
 
 	var json = JsonConvert.SerializeObject(dic, Newtonsoft.Json.Formatting.None);
 
-	File.WriteAllText($"{parent}/{outputName}", json);
+	File.WriteAllText($"{path}/{outputName}", json);
 	
 	"Success!!".Dump();
 }
